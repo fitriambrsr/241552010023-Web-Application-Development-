@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Label Inline CSS</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 20px;">
+
+    <h2 style="font-size: 18px; margin-bottom: 4px;">Contoh Label HTML</h2>
+
+    <form style="display: flex; flex-direction: column; gap: 4px; max-width: 250px;">
+
+        <!-- Metode 1: Membungkus input -->
+        <label style="font-size: 8px; display: flex; flex-direction: column;">
+            Username (Metode 1):
+            <input type="text" name="user1" placeholder="Masukkan username"
+                   style="padding: 5px; font-size: 13px; margin-top: 4px;" />
+        </label>
+
+        <!-- Metode 2: Menggunakan for dan id -->
+        <label for="user2" style="font-size: 8px;">
+            Username (Metode 2):
+        </label>
+        <input type="text" id="user2" name="user2"
+               placeholder="Masukkan username"
+               style="padding: 5px; font-size: 13px;" />
+
+        <button type="submit"
+                style="padding: 5px; font-size: 8px; cursor: pointer;">
+            Kirim
+        </button>
+
+    </form>
+
+</body>
+</html>
