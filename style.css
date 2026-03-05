@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#main-header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+    border-bottom: 3px solid #4CAF50;
+}
+
+.logo {
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline; /* Menerapkan DISPLAY */
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+.hero {
+    background: #ffffff;
+    padding: 80px 20px; /* Penggunaan Padding */
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.btn-hero {
+    display: inline-block;
+    background: #4CAF50;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px; /* Border-radius */
+}
+
+.btn-hero:hover {
+    background: #388E3C;
+}
+
+.about {
+    padding: 60px 0;
+    background: #fff;
+    margin: 20px 0; /* Penggunaan Margin */
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-img {
+    width: 200px;
+    height: 200px;
+    background: #ccc;
+    margin: 0 auto 20px; /* Center margin */
+    border-radius: 50%; /* Membuat gambar bulat (Rounded) */
+}
+
+.about-text {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact {
+    padding: 60px 0;
+}
+
+.contact h2 {
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 20px auto; /* Margin rapi */
+}
+
+input[type="text"], 
+input[type="email"], 
+textarea {
+    width: 100%;
+    padding: 12px; /* Padding input */
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Border-radius input */
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background: #4CAF50;
+}
