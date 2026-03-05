@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Atribut</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 2px;">
+
+<h2 style="font-size: 20px; margin: 2px 0; padding: 0;">Form</h2>
+
+<form style="display: flex; flex-direction: column; gap: 1px; max-width: 160px; font-size: 7px;">
+
+    <!-- Teks dengan minlength dan maxlength -->
+    <label>Teks: <input type="text" placeholder="Masukkan teks" minlength="3" maxlength="20" style="padding: 0; font-size: 7px; height: 8px; width: 100%;" /></label>
+
+    <!-- Email required -->
+    <label>Email: <input type="email" placeholder="Masukkan email" required style="padding: 0; font-size: 7px; height: 8px; width: 100%;" /></label>
+
+    <!-- Password default -->
+    <label>Password: <input type="password" value="rahasia123" style="padding: 0; font-size: 7px; height: 8px; width: 100%;" /></label>
+
+    <!-- Angka dengan min dan max -->
+    <label>Angka: <input type="number" min="1" max="100" value="10" style="padding: 0; font-size: 7px; height: 8px; width: 100%;" /></label>
+
+    <!-- Telp dengan pattern -->
+    <label>Telp: <input type="tel" pattern="[0-9]{10,12}" placeholder="081234567890" style="padding: 0; font-size: 7px; height: 8px; width: 100%;" /></label>
+
+    <!-- URL -->
+    <label>URL: <input type="url" placeholder="https://example.com" style="padding: 0; font-size: 7px; height: 8px; width: 100%;" /></label>
+
+    <!-- Search -->
+    <label>Cari: <input type="search" placeholder="Cari..." style="padding: 0; font-size: 7px; height: 8px; width: 100%;" /></label>
+
+    <!-- Date -->
+    <label>Tgl: <input type="date" style="padding: 0; font-size: 7px; height: 8px; width: 100%;" /></label>
+
+    <!-- Color -->
+    <label>Warna: <input type="color" value="#ff0000" style="padding: 0; width: 20px; height: 8px;" /></label>
+
+    <!-- Range -->
+    <label>Range: <input type="range" min="0" max="100" value="50" style="padding: 0; width: 100%;" /></label>
+
+    <!-- File -->
+    <label>File:<input type="file"style="padding: 0; font-size: 7px; height: 10px; width: 100%;" /></label>
+
+    <!-- Hidden -->
+    <input type="hidden" name="tersembunyi" value="rahasia" />
+
+    <!-- Disabled & Readonly -->
+    <label>Disabled: <input type="text" value="Tidak bisa diedit" disabled style="padding: 0; font-size: 7px; height: 8px; width: 100%;" /></label>
+    <label>Readonly: <input type="text" value="Bisa disalin, tidak bisa diedit" readonly style="padding: 0; font-size: 7px; height: 8px; width: 100%;" /></label>
+
+    <button type="submit" style="padding: 1px; font-size: 7px; cursor: pointer; height: 10px; margin-top: 2px;">Kirim</button>
+
+</form>
+
+</body>
+</html>

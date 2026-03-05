@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Contoh Elemen HTML</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 20px; font-size: 6px;">
+
+    <h2 style="margin-bottom: 8px; font-size: 6px;">Form Contoh Elemen HTML</h2>
+
+    <form action="#" method="post" style="font-size: 6px;">
+        
+        <fieldset style="margin-bottom: 8px; padding: 5px; font-size: 6px;">
+            <legend style="font-weight: bold; font-size: 6px;">Info Pribadi</legend>
+            <label style="display: block; margin: 3px 0; font-size: 6px;">
+                Nama: <input type="text" name="nama" style="font-size: 6px;" />
+            </label>
+        </fieldset>
+
+        <label style="display: block; margin: 3px 0; font-size: 6px;">
+            Negara:
+            <select name="negara" style="font-size: 6px;">
+                <option value="" disabled selected>Pilih...</option>
+                <option value="id">Indonesia</option>
+                <optgroup label="Lainnya">
+                    <option value="my">Malaysia</option>
+                </optgroup>
+            </select>
+        </label>
+
+        <fieldset style="margin-bottom: 8px; padding: 5px; font-size: 6px;">
+            <legend style="font-weight: bold; font-size: 6px;">Jenis Kelamin</legend>
+            <label style="display: block; margin: 3px 0; font-size: 6px;">
+                <input type="radio" name="gender" value="pria" style="font-size: 6px;" /> Pria
+            </label>
+            <label style="display: block; margin: 3px 0; font-size: 6px;">
+                <input type="radio" name="gender" value="wanita" style="font-size: 6px;" /> Wanita
+            </label>
+        </fieldset>
+
+        <fieldset style="margin-bottom: 8px; padding: 5px; font-size: 6px;">
+            <legend style="font-weight: bold; font-size: 6px;">Hobi</legend>
+            <label style="display: block; margin: 3px 0; font-size: 6px;">
+                <input type="checkbox" name="hobi" value="membaca" style="font-size: 6px;" /> Membaca
+            </label>
+            <label style="display: block; margin: 3px 0; font-size: 6px;">
+                <input type="checkbox" name="hobi" value="coding" checked style="font-size: 6px;" /> Coding
+            </label>
+        </fieldset>
+
+        <label style="display: block; margin: 3px 0; font-size: 6px;">
+            Pesan:
+            <textarea name="msg" rows="5" cols="40" maxlength="500" placeholder="Pesan..." style="display: block; margin-top: 3px; font-size: 6px;"></textarea>
+        </label>
+
+        <div style="margin-top: 5px; font-size: 6px;">
+            <button type="submit" style="margin-right: 3px; font-size: 6px;">Kirim</button>
+            <button type="reset" style="margin-right: 3px; font-size: 6px;">Hapus</button>
+            <button type="button" onclick="alert('Tombol diklik!')" style="font-size: 6px;">Klik Saya</button>
+        </div>
+
+    </form>
+</body>
+</html>

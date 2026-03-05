@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Fitri Ambar Sari</title>
+    <style>
+        body { background-color: #f4f7f6; font-family: 'Segoe UI', sans-serif; margin: 0; color: #34495e; }
+        
+        /* Navigasi */
+        nav { background: #1a3a5f; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: #dff9fb; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        nav a:hover { color: white; border-bottom: 2px solid white; }
+
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        h2 { color: #1a3a5f; text-align: center; margin-top: 40px; }
+
+        /* Galeri */
+        .gallery-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        figure { 
+            background: white; 
+            padding: 15px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+            width: 400px; 
+        }
+        img { width: 100%; border-radius: 5px; height: auto; object-fit: cover; }
+        figcaption { text-align: center; margin-top: 10px; font-weight: bold; color: #486581; }
+
+        /* Video */
+        .video-container { 
+            text-align: center; 
+            background: white; 
+            padding: 20px; 
+            border-radius: 10px; 
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        iframe { max-width: 100%; border-radius: 8px; border: none; }
+        
+        .footer-link { text-align: center; margin-top: 50px; padding: 30px; background: #eef2f7; }
+        .highlight { color: #1a3a5f; font-weight: bold; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#">Profil</a>
+        <a href="#">Pendidikan</a>
+        <a href="#">Akademik</a>
+        <a href="#galeri">Galeri Kegiatan</a>
+    </nav>
+
+    <div class="container" id="galeri">
+        <h2>Gallery Kegiatan & Organisasi</h2>
+        
+        <div class="gallery-grid">
+            <figure>
+                <img src="https://i.pinimg.com/736x/95/5d/b3/955db3f8ab4162ef15b0e0de636985e2.jpg" alt="Bismillah Semoga Allah Mudahkan">
+                <figcaption>Motivasi: Bismillah Semoga Allah Mudahkan</figcaption>
+            </figure>
+        </div>
+
+        <h2>Video Dokumentasi Kegiatan</h2>
+        <div class="video-container">
+            <iframe width="700" height="394" 
+                src="https://www.youtube.com/embed/FIXQQ7X7tZE?si=Wpec0p76yY5OVUWq" 
+                title="YouTube video player" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+            <p><em>Klik play untuk melihat video dokumentasi.</em></p>
+        </div>
+    </div>
+
+    <div class="footer-link">
+        <h3>Hubungi Saya untuk Kolaborasi</h3>
+        <p>Email: <a href="mailto:fitriambarsari069@gmail.com" class="highlight">fitriambarsari069@gmail.com</a></p>
+        <p>Instagram: <a href="https://instagram.com/balghisrr" target="_blank" class="highlight">@balghisrr</a></p>
+        <p>&copy; 2024 Fitri Ambar Sari</p>
+    </div>
+
+</body>
+</html>
