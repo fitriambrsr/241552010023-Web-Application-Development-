@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Mini Task Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+    <h2>Masuk ke Dashboard</h2>
+    <div id="globalError" class="error-global">Email atau password salah!</div>
+    <form id="loginForm">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required placeholder="nama@email.com">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <div class="password-container">
+                <input type="password" id="password" required placeholder="Masukkan password">
+                <i class="fa-solid fa-eye toggle-password" id="togglePassword"></i>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Masuk</button>
+    </form>
+    <div class="link">
+        Belum punya akun? <a href="register.html">Daftar di sini</a>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

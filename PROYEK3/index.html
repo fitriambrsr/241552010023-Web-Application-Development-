@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Dashboard Interaktif</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="dashboard-wrapper">
+        <header class="dashboard-header">
+            <span class="badge-proyek">PROYEK 3</span>
+            <h1>Dashboard Interaktif</h1>
+            <p>Integrasi Tab Navigation, Accordion, Kartu Statistik, dan Dark Mode.</p>
+        </header>
+
+        <nav class="tab-nav">
+            <button class="tombol-tab aktif" data-tab="ikhtisar">Ikhtisar</button>
+            <button class="tombol-tab" data-tab="statistik">Statistik</button>
+            <button class="tombol-tab" data-tab="pengaturan">Pengaturan</button>
+        </nav>
+
+        <main class="konten-utama">
+            
+            <section id="ikhtisar" class="panel aktif">
+                <div class="grid-statistik">
+                    <div class="kartu-stat" data-target="1200">
+                        <div class="kartu-icon">✨</div>
+                        <h3 class="penghitung">0</h3>
+                        <p>Total Pengguna</p>
+                    </div>
+                    <div class="kartu-stat" data-target="850">
+                        <div class="kartu-icon">📦</div>
+                        <h3 class="penghitung">0</h3>
+                        <p>Produk Terjual</p>
+                    </div>
+                    <div class="kartu-stat" data-target="94">
+                        <div class="kartu-icon">🔥</div>
+                        <h3 class="penghitung">0</h3>
+                        <p>Transaksi Aktif</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="statistik" class="panel">
+                <div class="box-premium">
+                    <h2>Analitik Performa</h2>
+                    <p>Visualisasi data performa sistem secara real-time.</p>
+                    <div class="mockup-chart">
+                        <div class="bar-chart" style="--tinggi: 40%"></div>
+                        <div class="bar-chart" style="--tinggi: 85%"></div>
+                        <div class="bar-chart" style="--tinggi: 60%"></div>
+                        <div class="bar-chart" style="--tinggi: 95%"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pengaturan" class="panel">
+                <div class="wrapper-akordion">
+                    <div class="item-akordion">
+                        <button class="judul-akordion">
+                            <span>Tema Tampilan</span>
+                            <span class="panah">▼</span>
+                        </button>
+                        <div class="konten-akordion">
+                            <div class="konten-dalam">
+                                <p>Sesuaikan tampilan dashboard ke mode gelap untuk kenyamanan mata Anda.</p>
+                                <button id="theme-btn" class="btn-toggle">Alihkan Mode Gelap</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="praktik3.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar - Mini Task Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+    <h2>Buat Akun Baru</h2>
+    <form id="registerForm">
+        <div class="form-group">
+            <label for="name">Nama Lengkap</label>
+            <input type="text" id="name" required placeholder="Masukkan nama Anda">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required placeholder="nama@email.com">
+            <div id="emailError" class="error-msg">Email sudah terdaftar!</div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <div class="password-container">
+                <input type="password" id="password" required placeholder="Minimal 6 karakter">
+                <i class="fa-solid fa-eye toggle-password" id="togglePassword"></i>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Daftar Sekarang</button>
+    </form>
+    <div class="link">
+        Sudah punya akun? <a href="login.html">Login di sini</a>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

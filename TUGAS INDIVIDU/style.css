@@ -1,0 +1,716 @@
+/* ==========================================================================
+   RESET & BASE STYLES
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* ==========================================================================
+   CARD CONTAINER
+   ========================================================================== */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 400px;
+}
+
+.card-success {
+    text-align: center;
+    padding: 40px 30px;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: center;
+    font-size: 24px;
+}
+
+p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* ==========================================================================
+   FORMS & INPUTS
+   ========================================================================== */
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #4f5d75;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 11px 13px;
+    border: 1px solid #ccd1d9;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+input:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.15);
+    outline: none;
+}
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+button, .btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #4A90E2;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #357ABD;
+}
+
+.btn-success {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #27ae60;
+}
+
+/* ==========================================================================
+   NOTIFICATIONS & MESSAGES
+   ========================================================================== */
+.icon-success {
+    font-size: 64px;
+    color: #2ecc71;
+    margin-bottom: 15px;
+}
+
+.error-msg {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 6px;
+    display: none;
+}
+
+.error-global {
+    background-color: #fde8e8;
+    color: #e74c3c;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 18px;
+    text-align: center;
+    border: 1px solid #f8b4b4;
+    display: none;
+}
+
+/* ==========================================================================
+   LINKS
+   ========================================================================== */
+.link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.link a {
+    color: #4A90E2;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   PASSWORD WITH EYE ICON STYLES
+   ========================================================================== */
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+/* Berikan sedikit ruang di kanan input agar teks tidak tertutup ikon */
+.password-container input {
+    padding-right: 40px; 
+}
+
+/* Mengatur posisi ikon mata di dalam input */
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #7f8c8d;
+    transition: color 0.2s ease;
+}
+
+.toggle-password:hover {
+    color: #34495e;
+}
+
+/* ==========================================================================
+   1. CORE FULL SCREEN WEB DASHBOARD LAYOUT
+   ========================================================================== */
+.dashboard-body {
+    display: block;
+    height: auto;
+    min-height: 100vh;
+    background-color: #f7fafc;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navbar {
+    width: 100%;
+    height: 70px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #e2e8f0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a202c;
+}
+
+.nav-brand i {
+    color: #3182ce;
+    font-size: 24px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.user-info {
+    font-size: 15px;
+    color: #4a5568;
+}
+
+/* Hanya teks nama yang berwarna biru tanpa latar belakang */
+.user-info strong {
+    color: #3182ce;
+    font-weight: 700;
+    background: none;
+    padding: 0;
+    text-transform: capitalize;
+}
+
+.btn-logout {
+    background-color: #fff5f5;
+    color: #e53e3e;
+    border: 1px solid #fed7d7;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    width: auto;
+}
+
+.btn-logout:hover {
+    background-color: #e53e3e;
+    color: white;
+}
+
+/* AREA KONTEN */
+.main-content {
+    margin-top: 70px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.content-container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* ==========================================================================
+   2. PANEL FORM BARU (GRID LAYOUT)
+   ========================================================================== */
+.task-form-section {
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.task-form-section h3, .task-list-section h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #2d3748;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-control label {
+    font-size: 13px;
+    color: #4a5568;
+    font-weight: 600;
+}
+
+.form-control input, .form-control textarea {
+    padding: 10px 14px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #f8fafc;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.form-control input:focus, .form-control textarea:focus {
+    background: #ffffff;
+    border-color: #3182ce;
+    outline: none;
+}
+
+.btn-add-task {
+    width: auto;
+    background: linear-gradient(135deg, #319795 0%, #2b6cb0 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-add-task:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(43, 108, 176, 0.2);
+}
+
+/* ==========================================================================
+   3. PANEL DAFTAR TUGAS & HEADER SEJAJAR (PERBAIKAN FITUR MENYAMPING)
+   ========================================================================== */
+.task-list-section {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    min-height: 200px;
+}
+
+/* Wadah Penyelaras Header List Tugas */
+.task-list-header {
+    display: flex;
+    justify-content: space-between; /* Melempar judul ke kiri, tab ke kanan */
+    align-items: center;            /* Menjaga keselarasan tengah vertikal */
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+/* Mengatur teks judul dan sub-teks instruksi */
+.section-title {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.section-title h3 {
+    margin: 0;
+    color: #2d3748;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.task-instruction {
+    font-size: 13px;
+    color: #718096;
+    margin: 0;
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* ==========================================================================
+   4. TAB NAVIGATION FILTER COMPONENT (FIXED SIDE-BY-SIDE)
+   ========================================================================== */
+.tab-navigation {
+    display: flex;
+    background-color: #edf2f7;
+    padding: 4px;
+    border-radius: 8px;
+    gap: 4px;
+    flex-shrink: 0; /* Mencegah bar navigasi tab mengecil atau gepeng */
+}
+
+.tab-btn {
+    border: none;
+    background: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #718096;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    white-space: nowrap; /* KUNCI UTAMA: Mencegah teks di dalam tombol pecah ke bawah */
+}
+
+.tab-btn:hover {
+    color: #2d3748;
+}
+
+.tab-btn.active {
+    background-color: #ffffff;
+    color: #3182ce;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* ==========================================================================
+   5. INTERACTIVE TASK ITEMS & COMPONENT ACTIONS
+   ========================================================================== */
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 16px 24px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #e2e8f0;
+    border-left: 5px solid #3182ce;
+    transition: all 0.3s ease;
+}
+
+.task-item:hover {
+    transform: translateX(4px);
+    background-color: #f8fafc;
+}
+
+.task-item .title-text {
+    color: #2d3748;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.task-left-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.task-checkbox {
+    width: 18px !important;
+    height: 18px !important;
+    cursor: pointer;
+    margin: 0;
+    accent-color: #3182ce;
+}
+
+/* KONDISI TUGAS SELESAI */
+.task-item.is-completed {
+    border-left-color: #cbd5e0;
+    background-color: #f8fafc;
+    opacity: 0.65;
+}
+
+.task-item.is-completed .title-text {
+    text-decoration: line-through;
+    color: #a0aec0;
+    font-weight: 500;
+}
+
+/* TOMBOL AKSI EDIT & HAPUS */
+.task-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-action {
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.btn-edit {
+    background: #ebf8ff;
+    color: #2b6cb0;
+}
+
+.btn-edit:hover {
+    background-color: #2b6cb0;
+    color: white;
+}
+
+.btn-delete {
+    background: #fff5f5;
+    color: #e53e3e;
+}
+
+.btn-delete:hover {
+    background-color: #e53e3e;
+    color: white;
+}
+
+/* PESAN KOSONG */
+.empty-msg {
+    text-align: center;
+    color: #a0aec0;
+    padding: 40px 0;
+}
+
+.empty-msg i {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #cbd5e0;
+}
+
+/* ==========================================================================
+   COMPONENT UI: MODAL POP-UP & DRAFT JAWABAN STYLES
+   ========================================================================== */
+/* Mengubah kursor item list tugas agar mengindikasikan bisa diklik */
+.task-item {
+    cursor: pointer;
+}
+
+.task-left-content {
+    flex: 1; /* Membuat area klik judul meluas penuh sepanjang baris */
+}
+
+/* Overlay Hitam Transparan di Latar Belakang Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 32, 44, 0.4);
+    backdrop-filter: blur(4px); /* Efek blur premium kekinian */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* Ketika Kelas Aktif Modal Dipanggil */
+.modal-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Kotak Konten Utama Pop-up */
+.modal-content-box {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 650px;
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    padding: 25px 30px;
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.is-open .modal-content-box {
+    transform: scale(1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 15px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #1a202c;
+    font-weight: 700;
+}
+
+.btn-close-modal {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #a0aec0;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.btn-close-modal:hover {
+    color: #4a5568;
+}
+
+/* Grid Keterangan Di Dalam Pop-up */
+.modal-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    background-color: #f7fafc;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #4a5568;
+}
+
+.modal-info-grid i {
+    color: #3182ce;
+    margin-right: 4px;
+}
+
+.modal-desc-section h4, .modal-answer-section h4 {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #2d3748;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.modal-desc-section p {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #4a5568;
+    margin: 0;
+    white-space: pre-line;
+}
+
+.modal-answer-section {
+    margin-top: 20px;
+    border-top: 1px dashed #e2e8f0;
+    padding-top: 20px;
+}
+
+.modal-answer-section textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f8fafc;
+    resize: vertical;
+    transition: all 0.2s ease;
+}
+
+.modal-answer-section textarea:focus {
+    background-color: #ffffff;
+    border-color: #3182ce;
+    outline: none;
+}
+
+/* Tombol Simpan Lembar Kerja Draft */
+.btn-save-draft {
+    background: linear-gradient(135deg, #319795 0%, #2b6cb0 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+    width: auto;
+}
+
+.btn-save-draft:hover {
+    box-shadow: 0 4px 12px rgba(43, 108, 176, 0.25);
+    transform: translateY(-1px);
+}

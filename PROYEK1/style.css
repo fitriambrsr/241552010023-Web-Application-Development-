@@ -1,0 +1,47 @@
+:root {
+  --bg: #f5f5f5;
+  --card: #ffffff;
+  --text: #111;
+}
+
+body.gelap {
+  --bg: #1a1a2e;
+  --card: #222831;
+  --text: #eeeeee;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial;
+  text-align: center;
+  transition: 0.3s;
+}
+
+#theme-btn {
+  margin-top: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.kartu {
+  background: var(--card);
+  width: 220px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  animation: muncul 0.5s ease;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background: gray;
+  border-radius: 50%;
+  margin: auto;
+}
+
+@keyframes muncul {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}

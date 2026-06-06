@@ -1,0 +1,58 @@
+body {
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+form {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.pesan-error {
+  color: red;
+  font-size: 12px;
+}
+
+.bilah {
+  height: 5px;
+  background: #444;
+  margin-top: 5px;
+}
+
+.isian {
+  height: 5px;
+  width: 0%;
+  background: red;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #22c55e;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tersembunyi {
+  display: none;
+}

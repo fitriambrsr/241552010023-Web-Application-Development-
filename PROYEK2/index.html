@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Proyek 2 - Form Validasi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form id="formulir">
+
+  <div class="field">
+    <label>Nama Lengkap</label>
+    <input id="nama" type="text" placeholder="Minimal 3 karakter">
+    <span class="pesan-error"></span>
+  </div>
+
+  <div class="field">
+    <label>Alamat Email</label>
+    <input id="email" type="email">
+    <span class="pesan-error"></span>
+  </div>
+
+  <div class="field">
+    <label>password</label>
+    <input id="password" type="password">
+
+    <div class="bilah">
+      <div class="isian"></div>
+    </div>
+
+    <span class="pesan-error"></span>
+  </div>
+
+  <button type="submit">Daftar Sekarang</button>
+
+  <div id="sukses" class="tersembunyi">
+    ✔ Berhasil!
+  </div>
+
+</form>
+
+<script src="praktik2.js"></script>
+</body>
+</html>
