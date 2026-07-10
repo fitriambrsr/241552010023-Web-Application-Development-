@@ -1,0 +1,16 @@
+# Mengabaikan folder library yang berat (bisa diinstall ulang lewat npm install)
+node_modules/
+
+# Mengabaikan file konfigurasi rahasia
+.env
+
+# Mengabaikan database lokal SQLite agar tidak bentrok di laptop dosen
+prisma/dev.db
+prisma/dev.db-journal
+*.db
+*.db-journal
+
+# Mengabaikan log error
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

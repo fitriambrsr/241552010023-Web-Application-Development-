@@ -1,0 +1,22 @@
+{
+  "name": "soal-1-nim-nama",
+  "version": "1.0.0",
+  "description": "Aplikasi Manajemen Tugas API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.0.0",
+    "@prisma/config": "^7.8.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.0",
+    "jsonwebtoken": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0",
+    "prisma": "^5.0.0"
+  }
+}
